@@ -49,7 +49,7 @@ class Command extends CommandBase {
               for (i <- 0 until nameHistory.size()) {
                 val name = nameHistory.get(i).getAsJsonObject
                 val b = name.has("changed_at")
-                put(31
+                put(
                   s"\u00a76${if (b) "" else "\u00a7l"}${name.get("username").getAsString} - ${if (b)
                     name.get("changed_at").getAsString
                       .replace("T", " @ ")
