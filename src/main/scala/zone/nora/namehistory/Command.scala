@@ -51,7 +51,7 @@ class Command extends CommandBase {
                 val b = name.has("changed_at")
                 put(
                   s"\u00a76${if (b) "" else "\u00a7l"}${name.get("username").getAsString} - ${if (b)
-                    name.get("changed_at").getAsString
+                    s"\u00A7e${name.get("changed_at").getAsString}"
                       .replace("T", " @ ")
                       .replace(".000Z", "") else "Original Name"}")
               }
